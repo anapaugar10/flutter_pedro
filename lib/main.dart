@@ -8,7 +8,7 @@ void main() {
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(
-      statusBarColor: Colors.blueAccent,
+      statusBarColor: Colors.redAccent,
     ),
   );
   runApp(YoutubePlayerDemoApp());
@@ -22,17 +22,17 @@ class YoutubePlayerDemoApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Youtube Player Flutter',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.redAccent,
         appBarTheme: const AppBarTheme(
-          color: Colors.blueAccent,
+          color: Colors.redAccent,
           titleTextStyle: TextStyle(
-            color: Colors.white,
+            color: Colors.gray,
             fontWeight: FontWeight.w300,
             fontSize: 20,
           ),
         ),
         iconTheme: const IconThemeData(
-          color: Colors.blueAccent,
+          color: Colors.redAccent,
         ),
       ),
       home: MyHomePage(),
@@ -120,7 +120,7 @@ class _MyHomePageState extends State<MyHomePage> {
             child: Text(
               _controller.metadata.title,
               style: const TextStyle(
-                color: Colors.white,
+                color: Colors.gray,
                 fontSize: 18.0,
               ),
               overflow: TextOverflow.ellipsis,
@@ -130,7 +130,7 @@ class _MyHomePageState extends State<MyHomePage> {
           IconButton(
             icon: const Icon(
               Icons.settings,
-              color: Colors.white,
+              color: Colors.gray,
               size: 25.0,
             ),
             onPressed: () {
@@ -151,7 +151,7 @@ class _MyHomePageState extends State<MyHomePage> {
         appBar: AppBar(
           title: const Text(
             'Pedro Pedro Pedro Pedro',
-            style: TextStyle(color: Colors.white),
+            style: TextStyle(color: Colors.gray),
           ),
         ),
         body: ListView(
@@ -212,7 +212,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                       FullScreenButton(
                         controller: _controller,
-                        color: Colors.blueAccent,
+                        color: Colors.redAccent,
                       ),
                     ],
                   ),
@@ -265,7 +265,7 @@ class _MyHomePageState extends State<MyHomePage> {
           TextSpan(
             text: value,
             style: const TextStyle(
-              color: Colors.blueAccent,
+              color: Colors.redAccent,
               fontWeight: FontWeight.w300,
             ),
           ),
@@ -287,7 +287,7 @@ class _MyHomePageState extends State<MyHomePage> {
             fontSize: 16.0,
           ),
         ),
-        backgroundColor: Colors.blueAccent,
+        backgroundColor: Colors.redAccent,
         behavior: SnackBarBehavior.floating,
         elevation: 1.0,
         shape: RoundedRectangleBorder(
